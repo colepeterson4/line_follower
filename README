@@ -1,0 +1,6 @@
+In this code we take in an image from the camera in ros, then crop it down and resize it, so that it is small
+enough that we can quickly perform calculations on each pixel. Then we turn it into an hsv rather than bgr.
+Next we iterate through each pixel checking for yellow colored pixels. We then average the horizontal position
+of these yellow pixels to get the center of the line on the floor. If this average value is to the left of the
+middle of the image then we turn right, and if it is to the right then we turn left. This allows us to follow
+the line on the ground.
